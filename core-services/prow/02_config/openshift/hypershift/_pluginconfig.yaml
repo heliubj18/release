@@ -3,6 +3,14 @@ approve:
   repos:
   - openshift/hypershift
   require_self_approval: false
+label:
+  restricted_labels:
+    openshift/hypershift:
+    - allowed_users:
+      - heliubj18
+      - jiezhao16
+      - lwan-wanglin
+      label: cherry-pick-approved
 lgtm:
 - repos:
   - openshift/hypershift
