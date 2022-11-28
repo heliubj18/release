@@ -484,6 +484,7 @@ tests:
       BASE_DOMAIN: qe.devcluster.openshift.com
       TEST_FILTERS: ~ChkUpgrade&;~DisconnectedOnly&;HyperShiftINSTALL&
       TEST_SCENARIOS: Hypershift
+      INSTANCE_TYPE: m5.4xlarge
     test:
     - ref: cucushift-helper-service-build-info
     - ref: idp-htpasswd
@@ -1288,6 +1289,7 @@ tests:
       BASE_DOMAIN: qe.azure.devcluster.openshift.com
       TEST_FILTERS: ~ChkUpgrade&;~DisconnectedOnly&;HyperShiftINSTALL&
       TEST_SCENARIOS: Hypershift
+      INSTANCE_TYPE: m5.4xlarge
     test:
     - ref: cucushift-helper-service-build-info
     - ref: idp-htpasswd
