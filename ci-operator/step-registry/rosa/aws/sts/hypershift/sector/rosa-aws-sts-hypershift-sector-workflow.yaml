@@ -12,6 +12,7 @@ workflow:
     - ref: osd-ccs-fleet-manager-provision-shards
     - chain: rosa-aws-sts-hypershift-provision
     - ref: osd-ccs-conf-idp-htpasswd-multi-users
+    - ref: cucushift-hypershift-extended-debug
     post:
     - chain: rosa-aws-sts-hypershift-deprovision
   documentation: |-

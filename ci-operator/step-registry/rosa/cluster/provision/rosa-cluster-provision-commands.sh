@@ -269,6 +269,7 @@ if [[ "$HOSTED_CP" == "true" ]]; then
       exit 1
     fi
 
+    PROVISION_SHARD_ID=88d699d7-7821-11ee-8b13-0a580a82022a
     HYPERSHIFT_SWITCH="${HYPERSHIFT_SWITCH}  --properties provision_shard_id:${PROVISION_SHARD_ID}"
     record_cluster "properties" "provision_shard_id" ${PROVISION_SHARD_ID}
   fi
