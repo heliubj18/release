@@ -127,7 +127,7 @@ check_pod_status() {
     unhealthy_pods=$(oc get pods --all-namespaces -o 'jsonpath={range .items[*]}{.metadata.namespace}{" "}{.metadata.name}{" "}{.status.phase}{"\n"}{end}' | grep -vE " (Running|Succeeded)$" || true)
     
     # Ignore some pods for ROSA HCP as they can take a long time to recover.
-    unhealthy_pods=$(echo "$unhealthy_pods" | grep -v "azure-path-fix" | grep -v "osd-delete-backplane" | grep -v "osd-cluster-ready" || true)
+    unhealthy_pods=$(echo "$unhealthy_pods" | grep -v "azure-path-fix" | grep -v "osd-delete-backplane" | grep -v "osd-cluster-ready" | grep -v "open-cluster-management-agent-addon" || true)
 
     if [[ -n "$unhealthy_pods" ]]; then
         error "Found unhealthy pods:"
